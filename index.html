@@ -11,9 +11,9 @@
     <!--mobile nav-->
     <nav class="mobile-nav fixed w-100">
         <ul class="flex flex-even">
-            <li><a href="#about" class="flex flex-column align-center"><i class="far fa-user"></i><span>about</span></a></li>
-            <li><a href="#projects" class="flex flex-column align-center"><i class="fas fa-cube"></i><span>projects</span></a></li>
-            <li><a href="#contact" class="flex flex-column align-center"><i class="fas fa-mobile-alt"></i><span>contact</span></a></li>
+            <li><a href="#about" class="flex flex-column align-center uppercase"><i class="far fa-user"></i><span>about</span></a></li>
+            <li><a href="#projects" class="flex flex-column align-center uppercase"><i class="fas fa-cube"></i><span>projects</span></a></li>
+            <li><a href="#contact" class="flex flex-column align-center uppercase"><i class="fas fa-mobile-alt"></i><span>contact</span></a></li>
         </ul>
     </nav>
 
@@ -27,20 +27,20 @@
                 <img src="./dist/images/profile.JPG" alt="Profile Picture">
             </div>
             <div class="main-info relative">
-                <h4 class="title">Jisan Jung</h4>
+                <h4 class="name">Jisan Jung</h4>
                 <span class="text">Web Developer</span>
                 <ul class="flex flex-center">
-                    <li class="text"><i class="fab fa-linkedin-in"></i></li>
-                    <li class="text"><i class="fab fa-github"></i></li>
+                    <li class="text"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li class="text"><a href="#"><i class="fab fa-github"></i></a></li>
                 </ul>
             </div>
             <div class="additional-info">
                 <div class="flex flex-column">
-                    <span class="text label">email</span>
+                    <span class="text label uppercase">email</span>
                     <a href="#"><span class="text">jjjung13@gmail.com</span></a>
                 </div>
                 <div class="flex flex-column">
-                    <span class="text label">location</span>
+                    <span class="text label uppercase">location</span>
                     <span class="text">Philadelphia, PA</span>
                 </div>
             </div>
@@ -48,7 +48,14 @@
 
         <!--about-->
         <section class="card" id="about">
-            about
+            <h1 class="title">About Me</h1>
+            <p class="text">
+                I am web developer that based in Philadelphia, PA.
+            </p> 
+            <p class="text">
+                What I love doing most is solving business problems by implementing simple, friendly user interfaces for clients.
+            </p>
+            <a href="#projects" class="btn">See my work</a>
         </section>
 
         <!--projects-->

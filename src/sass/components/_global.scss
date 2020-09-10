@@ -108,6 +108,9 @@ img {
 .text-right {
     text-align: right;
 }
+.uppercase {
+    text-transform: uppercase;
+}
 
 /* global to application */
 body {
@@ -122,16 +125,44 @@ body {
     main {
         top: 120px;
         @include container(small);
+        .card + .card {
+            margin-top: 1rem;
+        }
         .card {
             background: $white;
             padding: 1rem;
             border-radius: 20px;
             .title {
                 color: $xtra-dark;
+                font-size: 1.75rem;
+                &::after {
+                    content: "";
+                    display: block;
+                    background: $primary;
+                    width: 3rem;
+                    height: 3px;
+                }
             }
             .text {
                 color: $dark;
                 font-size: 14px;
+            }
+            p {
+                margin: 1rem 0;
+            }
+            .btn {
+                font-size: 14px;
+                display: block;
+                text-align: center;
+                background: $primary;
+                color: $white;
+                padding: 0.5rem 1rem;
+                border-radius: 10px;
+                transition: 0.25s ease all;
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.85;
+                }
             }
         }
     }
