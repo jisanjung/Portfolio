@@ -1,14 +1,26 @@
+@import "../utils/mixins";
+
 #projects {
     .title {
         margin-bottom: 1rem;
     }
     .flex {
         flex-direction: column;
+        @include media-query-grow(1024px) {
+            flex-direction: row;
+            .project + .project {
+                margin-left: 2rem;
+            }
+        }
         .project {
             margin: 1rem 0;
             .project-img {
                 border-radius: 14px;
                 height: 290px;
+                box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.125);
+                @include media-query-grow(1024px) {
+                    height: 200px;
+                }
                 img {
                     height: 100%;
                     border-radius: inherit;
