@@ -1,14 +1,27 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 
 #contact {
     .flex {
         flex-direction: column;
+        @include media-query-grow(1024px) {
+            flex-direction: row;
+        }
         #mapid {
             height: 250px;
             margin: 1.5rem 0;
             border-radius: 10px;
+            @include media-query-grow(1024px) {
+                margin-right: 1rem;
+                width: 50%;
+            }
         }
         form {
+            @include media-query-grow(1024px) {
+                margin-top: 1.5rem;
+                margin-left: 1rem;
+                width: 50%;
+            }
             .btn {
                 border: none;
                 font-family: $poppins;
