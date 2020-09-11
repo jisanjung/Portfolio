@@ -1,0 +1,24 @@
+#projects {
+    .title {
+        margin-bottom: 1rem;
+    }
+    .flex {
+        flex-direction: column;
+        .project {
+            margin: 1rem 0;
+            .project-img {
+                border-radius: 14px;
+                height: 290px;
+                img {
+                    height: 100%;
+                    border-radius: inherit;
+                    object-fit: cover;
+                    object-position: 40%;
+                }
+            }
+            .description {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

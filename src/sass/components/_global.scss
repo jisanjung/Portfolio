@@ -111,6 +111,10 @@ img {
 .uppercase {
     text-transform: uppercase;
 }
+.bold {
+    font-weight: bold;
+    color: $xtra-dark !important;
+}
 
 /* global to application */
 body {
@@ -141,6 +145,7 @@ body {
                     background: $primary;
                     width: 3rem;
                     height: 3px;
+                    margin-top: 5px;
                 }
             }
             .text {
