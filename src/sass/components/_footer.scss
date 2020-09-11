@@ -1,0 +1,10 @@
+@import "../utils/variables";
+
+footer {
+    padding: 1rem;
+    span {
+        color: $dark;
+        font-family: $poppins;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,19 @@
+@import "../utils/variables";
+
+#contact {
+    .flex {
+        flex-direction: column;
+        #mapid {
+            height: 250px;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+        }
+        form {
+            .btn {
+                border: none;
+                font-family: $poppins;
+                margin: 0.5rem 0;
+            }
+        }
+    }
+}

@@ -169,6 +169,21 @@ body {
                     opacity: 0.85;
                 }
             }
+            .input {
+                width: 100%;
+                background: $bg-light;
+                font-family: $poppins;
+                padding: 1em;
+                border: none;
+                border-radius: 10px;
+                color: $dark;
+                &::placeholder {
+                    color: $dark;
+                }
+            }
+            .input + .input {
+                margin-top: 1rem;
+            }
         }
     }
 }
