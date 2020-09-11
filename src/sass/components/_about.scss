@@ -1,6 +1,10 @@
 @import "../utils/mixins";
 
 #about {
+    margin-top: 1rem;
+    @include media-query-grow(768px) {
+        margin-top: 2rem;
+    }
     .btn {
         width: 12em;
         margin-top: 1.5rem;

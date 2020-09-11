@@ -25,14 +25,14 @@
 
     <main class="w-100 center-x">
         <!--info card-->
-        <section class="info card flex flex-column">
+        <section class="info card flex">
             <div class="profile-pic relative">
                 <img src="./dist/images/profile.JPG" alt="Profile Picture">
             </div>
             <div class="main-info relative">
                 <h4 class="name">Jisan Jung</h4>
                 <span class="text">Web Developer</span>
-                <ul class="flex flex-center">
+                <ul class="flex">
                     <li class="text"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                     <li class="text"><a href="#"><i class="fab fa-github"></i></a></li>
                 </ul>
@@ -49,65 +49,73 @@
             </div>
         </section>
 
-        <!--about-->
-        <section class="card" id="about">
-            <h1 class="title">About Me</h1>
-            <p class="text">
-                I am web developer that based in Philadelphia, PA.
-            </p> 
-            <p class="text">
-                What I love doing most is solving business problems by implementing simple, friendly user interfaces for clients.
-            </p>
-            <a href="#projects" class="btn">See my work</a>
-        </section>
+        <div class="flex">
+            <!--desktop nav-->
+            <nav class="desktop-nav card">
+                desktop nav
+            </nav>
+            <div class="content-wrap">
+                <!--about-->
+                <section class="card" id="about">
+                    <h1 class="title">About Me</h1>
+                    <p class="text">
+                        I am web developer that based in Philadelphia, PA.
+                    </p> 
+                    <p class="text">
+                        What I love doing most is solving business problems by implementing simple, friendly user interfaces for clients.
+                    </p>
+                    <a href="#projects" class="btn">See my work</a>
+                </section>
 
-        <!--projects-->
-        <section class="card" id="projects">
-            <h1 class="title">Projects</h1>
-            <div class="flex">
-                <div class="project">
-                    <div class="project-img w-100">
-                        <img src="./dist/images/glitterpolish.PNG" alt="Project 1">
+                <!--projects-->
+                <section class="card" id="projects">
+                    <h1 class="title">Projects</h1>
+                    <div class="flex">
+                        <div class="project">
+                            <div class="project-img w-100">
+                                <img src="./dist/images/glitterpolish.PNG" alt="Project 1">
+                            </div>
+                            <div class="description">
+                                <span class="text block bold">Glitter and Polish</span>
+                                <span class="text block">Nail Salon</span>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <div class="project-img w-100">
+                                <img src="./dist/images/joos.PNG" alt="Project 2">
+                            </div>
+                            <div class="description">
+                                <span class="text block bold">Joo's Burgers</span>
+                                <span class="text block">Restaurant</span>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <div class="project-img w-100">
+                                <img src="./dist/images/covid.PNG" alt="Project 3">
+                            </div>
+                            <div class="description">
+                                <span class="text block bold">COVID-19 Dashboard</span>
+                                <span class="text block">Single Page Application</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="description">
-                        <span class="text block bold">Glitter and Polish</span>
-                        <span class="text block">Nail Salon</span>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project-img w-100">
-                        <img src="./dist/images/joos.PNG" alt="Project 2">
-                    </div>
-                    <div class="description">
-                        <span class="text block bold">Joo's Burgers</span>
-                        <span class="text block">Restaurant</span>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project-img w-100">
-                        <img src="./dist/images/covid.PNG" alt="Project 3">
-                    </div>
-                    <div class="description">
-                        <span class="text block bold">COVID-19 Dashboard</span>
-                        <span class="text block">Single Page Application</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <!--contact-->
-        <section class="card" id="contact">
-            <h1 class="title">Contact</h1>
-            <div class="flex">
-                <div id="mapid" class="w-100"></div>
-                <form>
-                    <input type="text" placeholder="Full Name" class="input">
-                    <input type="email" placeholder="Email" class="input">
-                    <textarea class="input" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn w-100">Send Message</button>
-                </form>
+                <!--contact-->
+                <section class="card" id="contact">
+                    <h1 class="title">Contact</h1>
+                    <div class="flex">
+                        <div id="mapid" class="w-100"></div>
+                        <form>
+                            <input type="text" placeholder="Full Name" class="input">
+                            <input type="email" placeholder="Email" class="input">
+                            <textarea class="input" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn w-100">Send Message</button>
+                        </form>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
 
         <!--footer-->
         <footer>

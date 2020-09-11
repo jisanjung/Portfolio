@@ -129,13 +129,28 @@ body {
     main {
         top: 120px;
         @include container(small);
+        @include media-query-grow(1024px) {
+            top: 225px;
+        }
+        @include media-query-grow(1200px) {
+            @include container(large);
+        }
+        @include media-query-grow(1440px) {
+            @include container(x-large);
+        }
         .card + .card {
             margin-top: 1rem;
+            @include media-query-grow(768px) {
+                margin-top: 2rem;
+            }
         }
         .card {
             background: $white;
             padding: 1rem;
             border-radius: 20px;
+            @include media-query-grow(768px) {
+                padding: 2rem;
+            }
             .title {
                 color: $xtra-dark;
                 font-size: 1.75rem;
