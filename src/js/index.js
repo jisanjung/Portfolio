@@ -9,7 +9,7 @@ $(document).ready(function() {
     function smoothScroll() {
         $('a[href*=\\#]').on('click', function(e){     
             e.preventDefault();
-            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
+            $('html,body').animate({scrollTop:$(this.hash).offset().top - 100}, 800);
         });
     }
 
