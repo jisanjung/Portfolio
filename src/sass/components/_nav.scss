@@ -3,11 +3,16 @@
 
 /* global to this component */
 .active {
-    color: $primary;
-    @include media-query-grow(1024px) {
-        color: $white;
-        background: $primary;
-    }
+     i, span {
+         color: $primary !important;
+     }
+     @include media-query-grow(1024px) {
+         background: $primary;
+         border-radius: inherit;
+         i, span {
+            color: $white !important;
+        }
+     }
 }
 
 .mobile-nav {
@@ -48,14 +53,22 @@
             height: 100px;
             background: $bg-light;
             border-radius: 10px;
+            transition: 0.25s ease all;
+            &:hover {
+                background: #ebedf2;
+            }
             a {
+                transition: 0.25s ease all;
+                border-radius: inherit;
+                width: 100%;
+                height: 100%;
                 i {
                     font-size: 2rem;
                     color: $dark;
                 }
                 span {
                     margin-top: 0.5rem;
-                    font-size: 1rem;
+                    font-size: 0.75rem;
                     color: $dark;
                 }
             }
