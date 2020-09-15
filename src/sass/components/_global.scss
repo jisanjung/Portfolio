@@ -81,8 +81,11 @@ a {
 img {
     width: 100%;
 }
-.cursor:hover {
+.pointer:hover {
     cursor: pointer;
+}
+.none {
+    display: none;
 }
 .block {
     display: block;

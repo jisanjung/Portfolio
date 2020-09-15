@@ -1,0 +1,60 @@
+.modal {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba($color: #000000, $alpha: 0.5);
+    z-index: 1;
+    .modal-wrap {
+        height: 100%;
+        .modal-content {
+            animation-name: appear-down;
+            animation-duration: 0.5s;
+            width: 90%;
+            height: 350px;
+            border-radius: 14px;
+            @include media-query-grow(1024px) {
+                width: 50%;
+                height: 450px;
+            }
+            @include media-query-grow(1440px) {
+                width: 720px;
+                height: 500px;
+            }
+            img {
+                height: 100%;
+                object-fit: cover;
+                border-radius: inherit;
+            }
+            .close {
+                background: $danger;
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                left: 96%;
+                top: 12px;
+                border: none;
+                @include media-query-grow(768px) {
+                    left: 98%;
+                    &:hover {
+                        background: #c94a47;
+                    }
+                }
+                @include media-query-grow(1024px) {
+                    &:hover {
+                        background: #c94a47;
+                    }
+                }
+                i {
+                    font-size: 0.9rem;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@keyframes appear-down {
+    0% {top: 40%;}
+    100% {top: 50%;}
+}

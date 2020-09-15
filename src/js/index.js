@@ -4,6 +4,7 @@ $(document).ready(function() {
     smoothScroll();
     setMap();
     activeLink();
+    modal();
 
     // smooth scroll
     function smoothScroll() {
@@ -47,5 +48,28 @@ $(document).ready(function() {
                 }
             });
         })
+    }
+
+    // modal
+    function modal() {
+        var project = $(".project img");
+        var modal = $(".modal");
+        var modalImg = $(".modal img");
+        var closeBtn = $(".close");
+
+        // when project is clicked, change the img src of the modal
+         project.click(function(e) {
+            var src = $(this).attr("src");
+            var alt = $(this).attr("alt");
+
+            modal.removeClass("none");
+            modalImg.attr("src", src);
+            modalImg.attr("alt", alt);
+         });
+
+         // close modal
+         closeBtn.click(function() {
+             modal.addClass("none");
+         });
     }
 });
