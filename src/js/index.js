@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     // smooth scroll
     function smoothScroll() {
-        $('nav a[href^="#"]').on('click', function(e){     
+        $('.smooth-scroll a[href^="#"]').on('click', function(e){     
             e.preventDefault();
             $('html,body').animate({scrollTop:$(this.hash).offset().top - 100}, 800);
         });
@@ -104,14 +104,22 @@ $(document).ready(function() {
                     this.var.title.text("Glitter and Polish");
                     this.var.stack.text("HTML, CSS, jQuery, PHP, MySQL");
                     this.var.description.text("Promotional website for a client that also serves as the booking system for the business.");
-                    this.var.srcCode.attr("href", "https://glitterpolishnails.com/");
-                    this.var.link.attr("href", "https://github.com/jisanjung/Glitter-and-Polish");
+                    this.var.srcCode.attr("href", "https://github.com/jisanjung/Glitter-and-Polish");
+                    this.var.link.attr("href", "https://glitterpolishnails.com/");
                     break;
                 case "2":
                     this.var.title.text("Joo's Burgers");
+                    this.var.stack.text("HTML, SASS, JavaScript (ES6)");
+                    this.var.description.text("Restaurant site for a potential client in need of a way to promote their business.");
+                    this.var.srcCode.attr("href", "https://github.com/jisanjung/Joos");
+                    this.var.link.attr("href", "https://jisanjung.github.io/Joos/");
                     break;
                 case "3": 
                     this.var.title.text("COVID-19 Dashboard");
+                    this.var.stack.text("ReactJS, ChartJS, SASS");
+                    this.var.description.text("A dashboard web application that displays and visualizes live data for COVID-19.");
+                    this.var.srcCode.attr("href", "https://github.com/jisanjung/COVID-19-Data-Reports");
+                    this.var.link.attr("href", "https://jisanjung.github.io/COVID-19-Data-Reports/");
             }
         }
     }
