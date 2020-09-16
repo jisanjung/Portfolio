@@ -129,6 +129,32 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
     }
+    .btn {
+        font-size: 14px;
+        display: block;
+        text-align: center;
+        background: $primary;
+        color: $white;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        transition: 0.25s ease all;
+        border: none;
+        font-family: $poppins;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.85;
+        }
+        &-second {
+            background: transparent;
+            border: 1px solid $primary;
+            color: $primary;
+            &:hover {
+                cursor: pointer;
+                color: $white;
+                background: $primary;
+            }
+        }
+    }
     main {
         top: 120px;
         @include container(small);
@@ -172,20 +198,6 @@ body {
             }
             p {
                 margin: 1rem 0;
-            }
-            .btn {
-                font-size: 14px;
-                display: block;
-                text-align: center;
-                background: $primary;
-                color: $white;
-                padding: 0.5rem 1rem;
-                border-radius: 10px;
-                transition: 0.25s ease all;
-                &:hover {
-                    cursor: pointer;
-                    opacity: 0.85;
-                }
             }
             .input {
                 width: 100%;

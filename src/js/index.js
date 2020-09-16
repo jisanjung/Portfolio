@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     // smooth scroll
     function smoothScroll() {
-        $('a[href*=\\#]').on('click', function(e){     
+        $('nav a[href^="#"]').on('click', function(e){     
             e.preventDefault();
             $('html,body').animate({scrollTop:$(this.hash).offset().top - 100}, 800);
         });
@@ -53,23 +53,66 @@ $(document).ready(function() {
     // modal
     function modal() {
         var project = $(".project img");
-        var modal = $(".modal");
-        var modalImg = $(".modal img");
         var closeBtn = $(".close");
+        var moreInfo = $(".project .tint .btn");
 
         // when project is clicked, change the img src of the modal
-         project.click(function(e) {
-            var src = $(this).attr("src");
-            var alt = $(this).attr("alt");
+         project.click(function() {
+            modalObj.open($(this));
+            modalObj.displayInfo($(this));
+         });
 
-            modal.removeClass("none");
-            modalImg.attr("src", src);
-            modalImg.attr("alt", alt);
+         // when "more info" button is clicked, change the img src of the modal
+         moreInfo.click(function() {
+            modalObj.open($(this));
+            modalObj.displayInfo($(this));
          });
 
          // close modal
          closeBtn.click(function() {
-             modal.addClass("none");
+            modalObj.close();
          });
+    }
+
+    // modal object
+    var modalObj = {
+        var: {
+            modal: $(".modal"),
+            modalImg: $(".modal img"),
+            title: $(".modal-title"),
+            stack: $(".tech-stack"),
+            description: $(".modal-info .description"),
+            srcCode: $("#srcCode"),
+            link: $("#link")
+        },
+        open: function(element) {
+            var src = element.attr("src");
+            var alt = element.attr("alt");
+
+            this.var.modal.removeClass("none");
+            this.var.modalImg.attr("src", src);
+            this.var.modalImg.attr("alt", alt);
+        },
+        close: function() {
+            this.var.modal.addClass("none");
+        },
+        displayInfo: function(element) {
+            var projNum = element.attr("data-proj");
+
+            switch(projNum) {
+                case "1": 
+                    this.var.title.text("Glitter and Polish");
+                    this.var.stack.text("HTML, CSS, jQuery, PHP, MySQL");
+                    this.var.description.text("Promotional website for a client that also serves as the booking system for the business.");
+                    this.var.srcCode.attr("href", "https://glitterpolishnails.com/");
+                    this.var.link.attr("href", "https://github.com/jisanjung/Glitter-and-Polish");
+                    break;
+                case "2":
+                    this.var.title.text("Joo's Burgers");
+                    break;
+                case "3": 
+                    this.var.title.text("COVID-19 Dashboard");
+            }
+        }
     }
 });

@@ -21,10 +21,22 @@
                 width: 720px;
                 height: 500px;
             }
-            img {
-                height: 100%;
-                object-fit: cover;
+            .modal-img {
+                background: $black;
                 border-radius: inherit;
+                height: 100%;
+                .modal-title {
+                    z-index: 1;
+                    color: $white;
+                    padding: 0.5rem 1rem;
+                    text-shadow: 3px 3px 14px rgba(0, 0, 0, 1);
+                }
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: inherit;
+                    opacity: 0.8;
+                }
             }
             .close {
                 background: $danger;
@@ -34,6 +46,7 @@
                 left: 96%;
                 top: 12px;
                 border: none;
+                z-index: 1;
                 @include media-query-grow(768px) {
                     left: 98%;
                     &:hover {
@@ -50,11 +63,32 @@
                     color: $white;
                 }
             }
+            .modal-info {
+                background: $white;
+                left: 0;
+                right: 0;
+                bottom: -25px;
+                top: 60%;
+                border-bottom-left-radius: inherit;
+                border-bottom-right-radius: inherit;
+                padding: 1rem;
+                font-size: 14px;
+                @include media-query-grow(768px) {
+                    padding: 2rem;
+                }
+                .tech-stack {
+                    font-size: 12px;
+                    color: $med;
+                }
+                .btn + .btn {
+                    margin-left: 0.5rem;
+                }
+            }
         }
     }
 }
 
 @keyframes appear-down {
-    0% {top: 40%;}
-    100% {top: 50%;}
+    0% {top: 40%; opacity: 0;}
+    100% {top: 50%; opacity: 1;}
 }

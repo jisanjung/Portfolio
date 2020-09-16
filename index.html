@@ -25,7 +25,18 @@
         <div class="modal-wrap w-100 relative">
             <div class="modal-content center">
                 <button type="button" class="close flex flex-center align-center relative pointer"><i class="fas fa-minus"></i></button>
-                <img src="" alt="">
+                <div class="modal-img relative">
+                    <h1 class="modal-title absolute"></h1>
+                    <img src="" alt="">
+                </div>
+                <div class="modal-info absolute flex flex-column flex-between">
+                    <span class="text tech-stack">technologies</span>
+                    <p class="description text">description</p>
+                    <div class="btn-section flex">
+                        <a href="#" class="btn btn-second" id="srcCode" target="_blank">View Code</a>
+                        <a href="#" class="btn" id="link" target="_blank">See Project</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -101,8 +112,11 @@
                     <h1 class="title">Projects</h1>
                     <div class="flex">
                         <div class="project">
-                            <div class="project-img w-100 pointer">
-                                <img src="./dist/images/glitterpolish.PNG" alt="Project 1">
+                            <div class="project-img w-100 pointer relative">
+                                <div class="tint flex flex-center align-center">
+                                    <button type="button" class="btn" src="./dist/images/glitterpolish.PNG" data-proj="1">More Info</button>
+                                </div>
+                                <img src="./dist/images/glitterpolish.PNG" alt="Project 1" data-proj="1">
                             </div>
                             <div class="description">
                                 <span class="text block bold">Glitter and Polish</span>
@@ -110,8 +124,11 @@
                             </div>
                         </div>
                         <div class="project">
-                            <div class="project-img w-100 pointer">
-                                <img src="./dist/images/joos.PNG" alt="Project 2">
+                            <div class="project-img w-100 pointer relative">
+                                <div class="tint flex flex-center align-center">
+                                    <button type="button" class="btn" src="./dist/images/joos.PNG" data-proj="2">More Info</button>
+                                </div>
+                                <img src="./dist/images/joos.PNG" alt="Project 2" data-proj="2">
                             </div>
                             <div class="description">
                                 <span class="text block bold">Joo's Burgers</span>
@@ -119,8 +136,11 @@
                             </div>
                         </div>
                         <div class="project">
-                            <div class="project-img w-100 pointer">
-                                <img src="./dist/images/covid.PNG" alt="Project 3">
+                            <div class="project-img w-100 pointer relative">
+                                <div class="tint flex flex-center align-center">
+                                    <button type="button" class="btn" src="./dist/images/covid.PNG" data-proj="3">More Info</button>
+                                </div>
+                                <img src="./dist/images/covid.PNG" alt="Project 3" data-proj="3">
                             </div>
                             <div class="description">
                                 <span class="text block bold">COVID-19 Dashboard</span>
