@@ -61,7 +61,7 @@
             <div class="additional-info">
                 <div class="flex flex-column">
                     <span class="text label uppercase">email</span>
-                    <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jjjung13@gmail.com" target="_blank"><span class="text email">jjjung13@gmail.com</span></a>
+                    <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jjjung13@gmail.com" target="_blank"><span class="text email">jisan.jung@temple.edu</span></a>
                 </div>
                 <div class="flex flex-column">
                     <span class="text label uppercase">location</span>
@@ -153,12 +153,12 @@
                 <!--contact-->
                 <section class="card" id="contact">
                     <h1 class="title">Contact</h1>
-                    <div class="flex">
+                    <div class="flex form-wrap">
                         <div id="mapid" class="w-100"></div>
-                        <form>
-                            <input type="text" placeholder="Full Name" class="input">
-                            <input type="email" placeholder="Email" class="input">
-                            <textarea class="input" placeholder="Your Message"></textarea>
+                        <form action="https://formspree.io/mqkgzobg" method="POST">
+                            <input type="text"             placeholder="Full Name" class="input name" name="name">
+                            <input type="email" placeholder="Email" class="input email" name="_replyto">
+                            <textarea class="input message" placeholder="Your Message" name="message"></textarea>
                             <button type="submit" class="btn w-100">Send Message</button>
                         </form>
                     </div>

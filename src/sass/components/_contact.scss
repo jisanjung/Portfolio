@@ -2,7 +2,7 @@
 @import "../utils/mixins";
 
 #contact {
-    .flex {
+    .form-wrap {
         flex-direction: column;
         @include media-query-grow(1024px) {
             flex-direction: row;
@@ -26,6 +26,15 @@
                 border: none;
                 font-family: $poppins;
                 margin: 0.5rem 0;
+            }
+            .error {
+                border: 1px solid $danger;
+            }
+            .error-msg {
+                color: $danger;
+                font-size: 10px;
+                margin: 0;
+                display: none;
             }
         }
     }

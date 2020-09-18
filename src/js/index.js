@@ -5,6 +5,7 @@ $(document).ready(function() {
     setMap();
     activeLink();
     modal();
+    handleError();
 
     // smooth scroll
     function smoothScroll() {
@@ -122,5 +123,22 @@ $(document).ready(function() {
                     this.var.link.attr("href", "https://jisanjung.github.io/COVID-19-Data-Reports/");
             }
         }
+    }
+
+    // input handling in form
+    function handleError() {
+        var inputField = $(".input");
+        var name = $(".name");
+        var email = $(".email");
+        var message = $(".message");
+
+        inputField.on("blur", function() {
+
+            ($(this).is(name) && !$(this).val()) ? name.addClass("error") : name.removeClass("error");
+
+            ($(this).is(email) && !/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test($(this).val())) ? email.addClass("error") : email.removeClass("error");
+
+            ($(this).is(message) && !$(this).val()) ? message.addClass("error") : message.removeClass("error");
+        });
     }
 });
